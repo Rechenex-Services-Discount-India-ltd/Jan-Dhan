@@ -1,0 +1,18 @@
+File: index.html (Is file ko edit karein)
+
+1. UPI ID: Line 326
+window.upiAddress = 'yahan_nayi_upi_id_daalein';
+
+2. AMOUNT: Line 327
+window.paymentAmount = 369; (369 ko badalkar naya amount likhein)
+
+3. MESSAGE: Line 328
+window.paymentNote = 'yahan_naya_message_likhein';
+
+4. TIMER: Line 384
+var totalSeconds = 2 * 60 + 59; (Yeh 2 min 59 sec hai, number badal lein)
+
+5. META (FACEBOOK) PIXEL ID: Line 593
+fbq('init', '884863933991044'); (Yahan apna naya Pixel ID daalein)
+
+*Dhyan rakhein: Change karne ke baad Save karein aur (') ya (;) galti se delete na karein.*
