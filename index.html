@@ -15,8 +15,6 @@
     
     <link rel="preload" href="img/scratch-overlay.png" as="image">
     <link rel="preload" href="img/reward-image.png" as="image">
-    
-    <link rel="stylesheet" href="img/style.css">
 
     <style>
         .popup-overlay {
@@ -277,16 +275,44 @@
             animation: glowing 1s infinite alternate;
             border-radius: 10px;
         }
+
+        /* Desktop only - PC par dikhe */
+        .desktop-only {
+            display: none;
+        }
+
+        /* Mobile only - sirf mobile par dikhe */
+        .mobile-only {
+            display: block;
+        }
+
+        /* Desktop: sirf dhan.png dikhao, baaki sab chhupaao */
+        @media (min-width: 769px) {
+            .desktop-only {
+                display: block;
+            }
+            .mobile-only {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <!-- Desktop only - dhan.png sirf PC par dikhe -->
+    <div class="desktop-only" style="text-align:center; background:#000;">
+        <video src="img/dhan.png" width="100%" height="auto" autoplay loop muted playsinline style="display:block; max-width:100%;"></video>
+    </div>
+
     <div class="money-rain-overlay" id="moneyRain"></div>
 
     <div class="success-message" id="successMessage">
         Thank you for participating!
     </div>
 
+
+    <!-- Mobile only content - sirf mobile par dikhega -->
+    <div class="mobile-only">
 
     <a class="pay-link" href="#">
         <div class="top-banner-wrapper">
@@ -320,6 +346,8 @@
             <img src="img/Bot.png" width="100%" height="auto">
         </div>
     </a>
+
+    </div> <!-- end mobile-only -->
 
     <script>
         // ========== PAYMENT SETTINGS - CHANGE VALUES HERE ==========
